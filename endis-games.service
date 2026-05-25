@@ -1,0 +1,13 @@
+[Unit]
+Description=Endis Games
+After=network.target
+
+[Service]
+WorkingDirectory=/home/rogo/endis-games
+ExecStart=bun ./build/index.js
+Environment=PORT=4040
+Restart=always
+User=rogo
+
+[Install]
+WantedBy=multi-user.target
